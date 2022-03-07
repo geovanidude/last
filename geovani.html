@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+
+<head>
+	 <title>
+   geovani's the last
+  </title>
+
+</head>
+
+  <body>
+  <button class="c-button">PLAY</button>
+<style>
+.c-button {
+  min-width: 100%;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4682B4;
+  color: #fff;
+  padding: 0px 46px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.c-button:hover {
+  background: #B0C4DE;
+}
+
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+  
+ .c-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+</style>
+<script>
+        var urlObj = new window.URL(window.location.href);
+        var url = "https://mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=40753d033c6d88ca&libs=core&mid=70&parent=https://sites.google.com/site/unblockedgame76/thelast-io#up_scroll=no&up_iframeURL=https://www.thelast.io/&st=e%3DAIHE3cDB%252FtpDln7F4W5Gz5Ub38XrkTIvPSDzboLZFCvTYpZUp0kqvDDFfrIGD6z%252B5FkuRS4GYgb8q6Ifd%252BiO8dYqy19DddoIGifg04V0okJ2q4RXgIhT9xz4sdmapU82yYyU1TrbsPWr%26c%3Denterprise&rpctoken=3591224284687413623";
+
+        if (url) {
+            var win;
+
+            document.querySelector('button').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
+
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+
+                        }
+                    }, 500);
+
+
+                }
+            };
+        }
+    </script>
+
+</body>
+</html>
